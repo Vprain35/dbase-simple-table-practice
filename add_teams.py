@@ -6,11 +6,16 @@ conn = sqlite3.connect('football.db')
 cursor = conn.cursor()
 
 query = """
-    CREATE TABLE IF NOT EXISTS playoffTeams(
-    id INTEGER PRIMARY KEY,
-    city TEXT,
-    name TEXT
-    );
+    INSERT INTO playoffTeams (name,city) VALUES
+    ("Bills","Buffalo"),
+    ("49ers","San Francisco"),
+    ("Texans","Houston"),
+    ("Patriots","New England"),
+    ("Rams","Los Angeles"),
+    ("Bears","Chicago"),
+    ("Seahawks","Seattle"),
+    ("Broncos","Denver")
+    ;
 """
 
 cursor.execute(query)
